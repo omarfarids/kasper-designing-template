@@ -1,0 +1,914 @@
+/* =========================== 
+  ===== general styling ======
+  ============================*/
+:root {
+  font-family: "inter";
+  font-weight: 400;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+span,
+a,
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+p {
+  opacity: 0.8;
+}
+
+/* ======== on Hover ======== */
+.portfolio > div:nth-of-type(2) ul li:hover {
+  background-color: mediumspringgreen;
+  cursor: pointer;
+  color: white;
+}
+nav ul li:hover {
+  border-bottom: 1px solid mediumspringgreen;
+}
+nav ul li:hover a {
+  color: mediumspringgreen;
+}
+/* ======= flex items ======= */
+nav,
+nav > div,
+nav ul,
+nav + div + div,
+.services > div:nth-of-type(2) > div,
+.services > div:nth-of-type(2),
+.portfolio > div:nth-of-type(2) ul,
+.about > div:nth-of-type(2) > div,
+.details,
+.profile,
+.pricing > div:last-of-type,
+.contact > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+}
+.portfolio > div:last-of-type > div,
+.details > div:first-child,
+footer > div {
+  display: flex;
+  flex-direction: column;
+}
+nav i.fas,
+.services > div:first-child h1,
+.pricing > div:first-child h1,
+.portfolio > div:first-child h1,
+.portfolio > div:nth-of-type(2) > a,
+.portfolio > div:last-of-type > div,
+.portfolio > div:last-of-type > div a,
+.about > div:first-child h1,
+.details > div:nth-of-type(2) > div:nth-of-type(2) span,
+.about > div:last-of-type,
+.contact > div:first-child h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ===== space between sections ===== */
+.services,
+.services > div:last-of-type,
+.portfolio,
+.details,
+.pricing {
+  margin-top: 80px;
+}
+/* =========================== 
+========== header ==========
+============================*/
+header {
+  height: 700px;
+  position: relative;
+}
+
+nav {
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  align-items: center;
+  position: relative;
+  height: 70px;
+}
+nav li {
+  padding: 25px 10px;
+  height: 100%;
+  display: flex;
+}
+nav a {
+  color: white;
+}
+nav div {
+  align-items: center;
+}
+nav i.fas {
+  color: white;
+  border-left: 1px solid white;
+  padding-left: 10px;
+  height: 30px;
+}
+nav ul li:first-child {
+  border-bottom: 1px solid mediumspringgreen;
+}
+nav ul li:first-child a {
+  color: mediumspringgreen;
+}
+nav + div {
+  background-color: rgb(0, 250, 154, 0.4);
+  color: white;
+  width: 600px;
+  margin-top: 200px;
+  font-size: 0.8em;
+  padding: 20px 20px 20px 300px;
+}
+h1 {
+  margin-bottom: 20px;
+}
+header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  background: url("images/landing.jpg") no-repeat;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  filter: brightness(0.6);
+}
+nav + div + div {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  margin: auto;
+  justify-content: space-between;
+}
+nav + div + div div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+nav + div + div div:nth-of-type(2) {
+  border: none;
+  background-color: mediumspringgreen;
+}
+/* =========================== 
+========== services ==========
+============================== */
+.services > div:first-child {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+.services > div:first-child h1 {
+  padding: 10px;
+  width: 90px;
+  margin: 10px auto;
+  border-bottom: 2px solid black;
+  position: relative;
+}
+.services > div:first-child h1::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+}
+.services > div:nth-of-type(2) > div {
+  width: 300px;
+}
+
+.services > div:nth-of-type(2) {
+  width: 700px;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.services div:nth-of-type(2) i {
+  font-size: 2em;
+  margin-right: 30px;
+}
+.services h3 {
+  color: rgb(4, 184, 115);
+  margin-bottom: 20px;
+}
+.services > div:last-of-type {
+  height: 400px;
+  overflow-y: hidden;
+  width: 100%;
+  position: relative;
+  justify-content: flex-end;
+}
+.services > div:last-of-type img {
+  width: 300px;
+  object-fit: contain;
+  position: absolute;
+  bottom: -100px;
+  left: 100px;
+}
+.services > div:last-of-type > div {
+  background-color: rgb(0, 250, 154, 0.4);
+  color: white;
+  width: 600px;
+  font-size: 0.8em;
+  padding: 20px 300px 20px 20px;
+  position: absolute;
+  top: 70px;
+  height: fit-content;
+  right: 0;
+}
+.services > div:last-of-type > div li {
+  margin: 30px 10px;
+}
+.services > div:last-of-type::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  background: url("images/design-features.jpg") no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  filter: brightness(0.6);
+}
+
+/* =========================== 
+========== portfolio ==========
+============================== */
+.portfolio > div:first-child {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+.portfolio > div:first-child h1 {
+  padding: 10px;
+  width: 90px;
+  margin: 10px auto;
+  border-bottom: 2px solid black;
+  position: relative;
+}
+.portfolio > div:first-child h1::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+}
+.portfolio > div:nth-of-type(2) ul {
+  width: 250px;
+  margin: 20px auto;
+  justify-content: space-between;
+}
+.portfolio > div:nth-of-type(2) ul li {
+  padding: 10px;
+}
+.portfolio > div:nth-of-type(2) ul li:first-child {
+  background-color: mediumspringgreen;
+  cursor: pointer;
+  color: white;
+}
+.portfolio > div:nth-of-type(2) > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 250px);
+}
+.portfolio > div:nth-of-type(2) > div img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.portfolio > div:nth-of-type(2) > div img + div {
+  height: 0px;
+  position: relative;
+  bottom: 38px;
+  background-color: white;
+  overflow: hidden;
+  transition: height 0.3s;
+  transition-timing-function: step-end;
+}
+.portfolio > div:nth-of-type(2) > div img:hover + div {
+  height: 40px;
+}
+.portfolio > div:nth-of-type(2) > a {
+  background-color: mediumspringgreen;
+  cursor: pointer;
+  color: white;
+  width: 80px;
+  height: 40px;
+  font-size: 1.3em;
+  margin: 40px auto;
+  box-shadow: 0 0 5px 0 rgb(160, 160, 160);
+}
+.portfolio > div:last-of-type > video {
+  filter: brightness(0.6);
+}
+.portfolio > div:last-of-type > div {
+  background-color: rgba(60, 179, 113, 0.5);
+  height: 200px;
+  position: relative;
+  bottom: 500px;
+  justify-content: space-evenly;
+}
+.portfolio > div:last-of-type > div h3 {
+  color: white;
+}
+.portfolio > div:last-of-type > div p {
+  opacity: unset;
+  color: white;
+}
+.portfolio > div:last-of-type > div a {
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  width: 120px;
+  height: 40px;
+  font-size: 1.3em;
+  margin: 40px auto;
+}
+
+/* =========================== 
+============ about ===========
+============================== */
+.about > div:first-child {
+  width: 40%;
+  margin: -100px auto 100px;
+  text-align: center;
+}
+.about > div:first-child h1 {
+  padding: 10px;
+  width: 70px;
+  margin: 10px auto;
+  border-bottom: 2px solid black;
+  position: relative;
+  white-space: nowrap;
+}
+.about > div:first-child h1::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+}
+.about > img {
+  margin: auto;
+  position: relative;
+  z-index: -1;
+}
+.about > div:nth-of-type(2) {
+  background-image: url("images/stats.png");
+  color: white;
+  height: 400px;
+  padding-top: 80px;
+}
+.about > div:nth-of-type(2) > div {
+  background-color: rgba(60, 179, 113, 0.8);
+  width: 70%;
+  margin: auto;
+  height: 250px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about > div:nth-of-type(2) > div i.fas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+}
+.about > div:nth-of-type(2) > div > div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.details {
+  width: 80%;
+  margin: auto;
+  justify-content: space-evenly;
+  margin-top: 80px;
+}
+.details img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.details > div {
+  max-width: 35%;
+}
+.details > div:first-child {
+  gap: 30px;
+}
+.details h3 {
+  margin-bottom: 20px;
+}
+.profile {
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+.profile > p {
+  border-bottom: 1px solid rgb(170, 170, 170);
+  padding-bottom: 30px;
+}
+.profile span {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div {
+  width: 100%;
+  height: 20px;
+  margin-top: 60px;
+  position: relative;
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) span {
+  width: 35px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: -30px;
+  left: 90%;
+  transform: translateX(-50%);
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) span::before {
+  content: "";
+  border-width: 5px;
+  border-color: black transparent transparent transparent;
+  border-style: solid;
+  position: absolute;
+  bottom: -10px;
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(1) span {
+  left: 90%;
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(2) span {
+  left: 85%;
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(3) span {
+  left: 80%;
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(4) span {
+  left: 90%;
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(1) {
+  background-image: linear-gradient(
+    to right,
+    mediumspringgreen 0% 90%,
+    rgb(120, 120, 120) 90% 100%
+  );
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(2) {
+  background-image: linear-gradient(
+    to right,
+    mediumspringgreen 0% 85%,
+    rgb(120, 120, 120) 85% 100%
+  );
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(3) {
+  background-image: linear-gradient(
+    to right,
+    mediumspringgreen 0% 80%,
+    rgb(120, 120, 120) 80% 100%
+  );
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(4) {
+  background-image: linear-gradient(
+    to right,
+    mediumspringgreen 0% 90%,
+    rgb(120, 120, 120) 90% 100%
+  );
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div::before {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  font-size: 0.8em;
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(1)::before {
+  content: "ADOBE";
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(2)::before {
+  content: "HTML & CSS";
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(3)::before {
+  content: "JAVASCRIPT";
+}
+.details > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(4)::before {
+  content: "PHP";
+}
+.about > div:last-of-type {
+  width: 100%;
+  height: 250px;
+  background-image: url("images/quote.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 80px 0;
+  color: white;
+  font-size: 1.5em;
+  filter: grayscale(1);
+  flex-direction: column;
+  text-shadow: 1px 1px 10px black, -1px -1px 3px black;
+}
+.about > div:last-of-type > p {
+  font-size: 0.8em;
+  color: mediumspringgreen;
+  margin-top: 30px;
+}
+/* =========================== 
+=========== pricing ==========
+============================== */
+.pricing {
+  position: relative;
+  top: 100px;
+}
+.pricing > div:first-child {
+  width: 40%;
+  margin: -100px auto 100px;
+  text-align: center;
+}
+.pricing > div:first-child h1 {
+  padding: 10px;
+  width: 70px;
+  margin: 10px auto;
+  border-bottom: 2px solid black;
+  position: relative;
+  white-space: nowrap;
+}
+.pricing > div:first-child h1::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+}
+.pricing table {
+  width: 70%;
+  margin: 0 auto 200px;
+  border-collapse: collapse;
+  background-color: rgb(247, 247, 247);
+  text-align: center;
+}
+td {
+  border-right: 20px solid rgb(255, 255, 255);
+  padding: 30px;
+}
+tr {
+  border-top: 1px solid mediumspringgreen;
+}
+.pricing table ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid mediumspringgreen;
+}
+.pricing table ul li:last-of-type {
+  border: none;
+}
+.pricing table a {
+  padding: 10px;
+  border: 1px solid mediumspringgreen;
+  color: black;
+  box-shadow: 0px 0px 5px 0 rgb(160, 160, 160);
+}
+.pricing table span {
+  display: inline-block;
+  font-size: 3em;
+  font-weight: 700;
+  padding: 5px;
+}
+.pricing table + div,
+.pricing > div:last-of-type {
+  position: relative;
+  top: -150px;
+}
+.pricing table + div {
+  width: 350px;
+  margin: auto;
+  text-align: center;
+}
+.pricing table + div a {
+  padding: 10px;
+  background-color: mediumspringgreen;
+  color: white;
+  box-shadow: 0 0 5px 0 rgb(160, 160, 160);
+  width: 100px;
+  margin: 10px auto;
+  font-size: 0.8em;
+}
+.pricing > div:last-of-type {
+  width: 100%;
+  height: 250px;
+  background-image: url("images/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 150px;
+  margin: 80px 0;
+}
+.pricing > div:last-of-type p {
+  width: 50%;
+  opacity: unset;
+}
+.pricing form input[type="email"] {
+  background-color: transparent;
+  border: none;
+}
+.pricing form input[type="submit"] {
+  padding: 10px;
+  background-color: mediumspringgreen;
+  color: white;
+  width: 100px;
+  border: none;
+}
+.pricing form {
+  border: 1px solid white;
+  padding-left: 7px;
+}
+/* =========================== 
+========== contact ===========
+============================== */
+.contact > div:first-child {
+  width: 40%;
+  margin: -100px auto 100px;
+  text-align: center;
+}
+.contact > div:first-child h1 {
+  padding: 10px;
+  width: 70px;
+  margin: 10px auto;
+  border-bottom: 2px solid black;
+  position: relative;
+  white-space: nowrap;
+}
+.contact > div:first-child h1::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+}
+.contact > div:nth-of-type(2) {
+  width: 50%;
+  margin: auto;
+  gap: 40px;
+}
+.contact input {
+  display: block;
+  width: 500px;
+  height: 50px;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.contact textarea {
+  width: 500px;
+  height: 150px;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.contact form input[type="submit"] {
+  padding: 10px;
+  background-color: mediumspringgreen;
+  color: white;
+  width: 130px;
+  box-shadow: 0 0 5px 0 rgb(160, 160, 160);
+  border: none;
+}
+.contact > div:nth-of-type(2) > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 150px;
+  gap: 80px;
+}
+/* =========================== 
+=========== footer ===========
+============================== */
+footer {
+  height: 250px;
+  background-image: url("images/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+footer > div {
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  margin: 40px auto 0;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+footer > div span {
+  display: inline-block;
+  color: mediumspringgreen;
+}
+footer > div p {
+  opacity: unset;
+}
+footer > div > div > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer > div > div i:hover {
+  color: mediumspringgreen;
+}
+/* =========================== 
+======= medium screen ========
+============================== */
+@media (max-width: 750px) {
+  nav {
+    width: 90%;
+  }
+  .services > div:nth-of-type(2) {
+    width: 500px;
+  }
+  .services > div:nth-of-type(2) > div {
+    width: 250px;
+  }
+  .services > div:last-of-type > div {
+    width: 100%;
+    padding-right: 20px;
+  }
+  .services > div:last-of-type img {
+    display: none;
+  }
+  .portfolio > div:nth-of-type(2) > div {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 243px);
+  }
+  .portfolio > div:last-of-type > div {
+    height: 170px;
+    bottom: 300px;
+  }
+  .about > div:nth-of-type(2) > div {
+    width: 100%;
+  }
+  .details {
+    flex-direction: column;
+  }
+  .details > div {
+    max-width: 80%;
+  }
+  .pricing > div:last-of-type {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .pricing > div:last-of-type > form {
+    width: fit-content;
+  }
+  .pricing > div:last-of-type > p {
+    width: 80%;
+  }
+  .contact > div:nth-of-type(2) {
+    flex-direction: column-reverse;
+    width: 80%;
+    text-align: center;
+  }
+  nav + div {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =========================== 
+======= mobile screen ========
+============================== */
+@media (max-width: 375px) {
+  :root {
+    min-width: 375px;
+  }
+  nav {
+    width: 98%;
+    flex-direction: column;
+    border: none;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+  nav li {
+    padding: 15px 5px;
+    height: 100%;
+    display: inline-block;
+  }
+  nav > div {
+    display: flex;
+    width: 90%;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .services > div:nth-of-type(2) {
+    flex-direction: column;
+    align-items: center;
+    width: 375px;
+  }
+  .portfolio > div:nth-of-type(2) > div {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 229px);
+  }
+  .portfolio > div:last-of-type > div {
+    bottom: 200px;
+  }
+  .pricing table {
+    width: 100%;
+  }
+  td {
+    border-right: 1px solid rgb(255, 255, 255);
+    padding: 5px;
+  }
+  .pricing > div:last-of-type > form {
+    width: fit-content;
+  }
+  .pricing > div:last-of-type > p {
+    width: 100%;
+  }
+  .pricing > div:last-of-type {
+    padding: 10px;
+    width: 100%;
+  }
+  .contact > div:nth-of-type(2) {
+    flex-direction: column-reverse;
+    width: 90%;
+    text-align: center;
+  }
+  .contact > div:nth-of-type(2) > div {
+    align-self: center;
+    gap: 20px;
+    width: 70%;
+  }
+  .contact > div:nth-of-type(2) > form input,
+  .contact textarea {
+    width: 98%;
+  }
+  .about > img {
+    width: 350px;
+    margin-left: 0;
+  }
+}
